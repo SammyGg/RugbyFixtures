@@ -1,0 +1,53 @@
+
+Top create an venv, open a py file in the project in vs code. Select interpreter, create venv and use the requirements.txt in the prompt
+.\.venv\Scripts\activate
+
+py -m pip install django
+
+django-admin startproject ggpj
+
+Nav to lyfwork\lyfwork
+
+#Had an issue ModuleNotFoundError: No module named 'distutils', so ran
+pip install setuptools
+
+
+py manage.py startapp meetings # Create a new website
+
+cd meeting_planner # can only run manage.py from here
+
+py manage.py runserver
+
+py manage.py dbshell # Login to sqllite - need to add sql lite to env vars and download tools/ zip
+
+py manage.py showmigrations # view waiting migrations
+
+py manage.py makemigrations # will create a migration 0001
+
+py manage.py sqlmigrate meetings 0001_initial # converts to sql migration
+
+py manage.py migrate # applies waiting migrations
+
+
+py manage.py createsuperuser
+
+matthewgascoyne
+madmin (madmin2)
+mjgascoyne@hotmail.com
+mrhanky
+samue
+
+
+https://lygogetter.scm.azurewebsites.net/webssh/host
+
+​-- Step 1: Create a new SQL Server login
+CREATE LOGIN [rfdbadmin] WITH PASSWORD = '$#MTILoG5^s4';
+ -- Step 2: Switch to the database where you want to grant access
+USE rfdb;
+-- Step 3: Create a user in the database for the new login
+
+CREATE USER [rfdbadmin] FOR LOGIN [rfdbadmin];
+- Step 4: Grant the db_owner role to the new user
+ALTER ROLE db_owner ADD MEMBER [rfdbadmin];
+
+https://docs.djangoproject.com/en/5.0/ref/models/fields/
