@@ -51,3 +51,4 @@ CREATE USER [rfdbadmin] FOR LOGIN [rfdbadmin];
 ALTER ROLE db_owner ADD MEMBER [rfdbadmin];
 
 https://docs.djangoproject.com/en/5.0/ref/models/fields/
+password 2AT#AKHNh@

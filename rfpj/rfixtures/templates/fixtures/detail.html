@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Fixture : {{fixture.title}}</title>
+</head>
+<h1>{{fixture.title}}</h1>
+<body>
+     <p>
+        This fixture has been scheduled on {{fixture.date}}, at
+        {{fixture.start_time}} in <strong>{{Fixture.Club}}</strong>
+     </p>
+<a href="{% url 'welcome' %}">Home</a>
+</body>
+</html>

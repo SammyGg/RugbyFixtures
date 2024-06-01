@@ -6,9 +6,19 @@
 </head>
 <h1>Rugby Fixture finder</h1>
 <body>
-     <p>
-        This is where you can find rugby fixtures.
-     </p>
-
+     <h2>Fixtures</h2>
+     <ul>
+        {% for fixture in fixtures %}
+            <li>
+                <a href="{% url 'detail' fixture.id %}">
+                {{ fixture.title }}
+                </a>
+            </li>
+        {% endfor %}
+     </ul>
+     <ul>
+        <a href="{% url 'clubs' %}">Clubs list</a>
+     </ul>
+    
 </body>
 </html>
