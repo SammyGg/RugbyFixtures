@@ -24,5 +24,5 @@ urlpatterns = [
     path('', welcome, name="welcome"),
     path('date', date),
     path('about', about),
-    path ('rfixtures/', include('meetings.urls')),
+    path ('rfixtures/', include('rfixtures.urls')),
 ]

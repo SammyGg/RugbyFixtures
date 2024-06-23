@@ -1,11 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Welcome to Rugby fixtures</title>
-</head>
-<h1>Rugby Fixture finder</h1>
-<body>
+{% extends "base.html" %}
+
+{%block title%}Welcome{%endblock%}
+
+{% block content%}
+    <h1>Rugby Fixture finder</h1>
+    
      <h2>Fixtures</h2>
      <ul>
         {% for fixture in fixtures %}
@@ -17,8 +16,9 @@
         {% endfor %}
      </ul>
      <ul>
-        <a href="{% url 'clubs' %}">Clubs list</a>
+        <a href="{% url 'clubs' %}">Clubs list</a> 
+        <p></p>
+        <a href="{% url 'new' %}">add new Fixture</a>
      </ul>
     
-</body>
-</html>
+{%endblock%}

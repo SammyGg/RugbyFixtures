@@ -1,7 +1,9 @@
 from django.urls import path
 from . import views
+#from rfixtures.views import detail, club_list
 
-urlspatterns = [
-    path ('<int:id>', views.detail, name="details"),
+urlpatterns = [
+    path ('<int:id>', views.detail, name="detail"),
     path ('clubs', views.club_list, name="clubs"),
+    path('new', views.new, name="new")
 ]
