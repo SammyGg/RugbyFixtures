@@ -9,8 +9,13 @@ https://docs.djangoproject.com/en/5.0/howto/deployment/wsgi/
 
 import os
 
-from django.core.wsgi import get_wsgi_application
+settings_module = 'rfpj.deployment_pr' if 'WEBSITE_HOSTNAME' in os.environ else 'rfpj.settings'
+#settings_module = 'ggpj.settings'
 
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'rfpj.settings')
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', settings_module)
+
+# from django.core.wsgi import get_wsgi_application
+
+# os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'rfpj.settings')
 
 application = get_wsgi_application()
