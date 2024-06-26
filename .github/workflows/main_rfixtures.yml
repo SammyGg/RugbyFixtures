@@ -24,13 +24,11 @@ jobs:
 
       - name: Create and start virtual environment
         run: |
-          cd rfpj
           python -m venv venv
           source venv/bin/activate
       
       - name: Install dependencies
         run: |
-          cd rfpj
           ls -la
           pip install -r requirements.txt
         
@@ -38,7 +36,6 @@ jobs:
 
       - name: Zip artifact for deployment
         run: | 
-            cd rfpj
             zip release.zip ./* -r
 
       - name: Upload artifact for deployment jobs
@@ -46,7 +43,7 @@ jobs:
         with:
           name: python-app
           path: |
-            rfpj/release.zip
+            release.zip
             !venv/
 
   deploy:
