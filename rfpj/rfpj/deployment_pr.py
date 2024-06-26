@@ -37,7 +37,7 @@ MIDDLEWARE = [
 DATABASES = {
     'default': {
         'ENGINE': 'mssql',  # Use 'mssql' for django-mssql-backend
-        'NAME': 'DWH_DB',
+        'NAME': 'rfdb',
         'USER': os.getenv('ggUserName', 'default_password'),
         'PASSWORD': os.getenv('ggPassword', 'default_password'),
         'HOST':  "fapr-prod-dwh-sql01.database.windows.net", #os.getenv('ggHostServerName', 'default_password'), 
