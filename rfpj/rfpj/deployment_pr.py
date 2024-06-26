@@ -4,7 +4,7 @@ from .settings import *
 from .settings import BASE_DIR
 
 # print ("Starting pr_dep")
-ALLOWED_HOSTS = [os.environ['WEBSITE_HOSTNAME']]
+ALLOWED_HOSTS = ['169.254.129.2', os.environ['WEBSITE_HOSTNAME']]
 CSRF_TRUSTED_ORIGINS = ['https://' + os.environ['WEBSITE_HOSTNAME']]
 
 DEBUG = False
